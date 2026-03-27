@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In - Bethnal Green Health Centre</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="nhs-banner"><div class="container nhs-banner-inner"><a href="https://www.nhs.uk" class="nhs-logo-link" target="_blank"><svg class="nhs-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 16" width="80" height="32"><path fill="#fff" d="M0 0h40v16H0z"/><path fill="#005eb8" d="M3.9 1.5h4.4l2.6 9h.1l1.8-9h3.3l-2.8 13H9l-2.7-9h-.1l-1.8 9H1.1M17.3 1.5h3.6l-1 4.9h4L25 1.5h3.5l-2.7 13h-3.5l1.1-5.6h-4.1l-1.2 5.6h-3.4M37.7 4.4c-.7-.3-1.6-.6-2.9-.6-1.4 0-2.5.2-2.5 1.3 0 1.8 5.1 1.2 5.1 5.1 0 3.6-3.3 4.5-6.4 4.5-1.3 0-2.9-.3-4-.7l.8-2.7c.7.4 2.1.7 3.2.7s2.8-.2 2.8-1.5c0-2.1-5.1-1.3-5.1-5 0-3.4 2.9-4.4 5.8-4.4 1.6 0 3.1.2 4 .6"/></svg></a><nav class="nhs-top-nav"><a href="https://www.nhs.uk/nhs-app/" target="_blank">NHS App</a><a href="https://111.nhs.uk/" target="_blank">NHS 111</a></nav></div></div>
+
+    <header class="main-header"><div class="container header-inner"><div class="header-left"><div class="practice-icon">&#9769;</div><div><h1 class="practice-name">Bethnal Green Health Centre</h1><p class="practice-subtitle">NHS GP Practice &bull; Tower Hamlets</p></div></div><div class="header-right"><a href="signin.html" class="btn btn-outline">Sign In</a><a href="register.html" class="btn btn-primary">Register</a></div></div></header>
+
+    <nav class="main-nav"><div class="container"><button class="mobile-menu-btn" onclick="toggleMenu()" aria-label="Menu">&#9776;</button><ul class="nav-list" id="navList"><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="services.html">Services</a></li><li><a href="self-referral.html">Self-Referral</a></li><li><a href="appointments.html">Appointments</a></li><li><a href="results.html">Test Results</a></li><li><a href="register.html">New Patients</a></li><li><a href="contact.html">Contact</a></li></ul></div></nav>
+
+    <div class="page-header">
+        <div class="container">
+            <p class="breadcrumb"><a href="index.html">Home</a> &rsaquo; Sign In</p>
+            <h2>Sign In to Your Account</h2>
+            <p>Access your appointments, test results, and health records</p>
+        </div>
+    </div>
+
+    <section class="section">
+        <div class="container">
+            <div class="form-card signin-container" style="margin:0 auto;">
+
+                <!-- NHS Login -->
+                <a href="https://www.nhs.uk/nhs-app/" target="_blank" class="nhs-login-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 16" width="60" height="24"><path fill="#fff" d="M0 0h40v16H0z" fill-opacity="0"/><path fill="#fff" d="M3.9 1.5h4.4l2.6 9h.1l1.8-9h3.3l-2.8 13H9l-2.7-9h-.1l-1.8 9H1.1M17.3 1.5h3.6l-1 4.9h4L25 1.5h3.5l-2.7 13h-3.5l1.1-5.6h-4.1l-1.2 5.6h-3.4M37.7 4.4c-.7-.3-1.6-.6-2.9-.6-1.4 0-2.5.2-2.5 1.3 0 1.8 5.1 1.2 5.1 5.1 0 3.6-3.3 4.5-6.4 4.5-1.3 0-2.9-.3-4-.7l.8-2.7c.7.4 2.1.7 3.2.7s2.8-.2 2.8-1.5c0-2.1-5.1-1.3-5.1-5 0-3.4 2.9-4.4 5.8-4.4 1.6 0 3.1.2 4 .6"/></svg>
+                    Continue with NHS Login
+                </a>
+                <p style="text-align:center;font-size:0.82rem;color:#768692;margin-top:8px;">Secure login via your NHS account</p>
+
+                <div class="signin-divider"><span>or sign in with your practice account</span></div>
+
+                <!-- Practice Login -->
+                <form onsubmit="handleSignIn(event)">
+                    <div class="form-group">
+                        <label for="email">Email address</label>
+                        <input type="email" id="email" class="form-control" placeholder="you@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" class="form-control" placeholder="Enter your password" required>
+                    </div>
+                    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:24px;">
+                        <label style="font-size:0.88rem;display:flex;align-items:center;gap:6px;cursor:pointer;">
+                            <input type="checkbox"> Remember me
+                        </label>
+                        <a href="#" style="font-size:0.88rem;">Forgot password?</a>
+                    </div>
+                    <button type="submit" class="btn btn-secondary" style="width:100%;">Sign In</button>
+                </form>
+
+                <div style="text-align:center;margin-top:28px;padding-top:20px;border-top:1px solid #e8edee;">
+                    <p style="font-size:0.9rem;color:#425563;">Don't have an account? <a href="register.html"><strong>Register as a new patient</strong></a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer"><div class="container"><div class="footer-grid"><div><h4>Bethnal Green Health Centre</h4><p>Bethnal Green Road<br>London, E2 6DG</p><p>Tel: 020 7364 0800</p></div><div><h4>Quick Links</h4><ul><li><a href="appointments.html">Book Appointment</a></li><li><a href="register.html">Register</a></li></ul></div><div><h4>Useful Links</h4><ul><li><a href="https://www.nhs.uk" target="_blank">NHS Website</a></li><li><a href="https://www.nhs.uk/nhs-app/" target="_blank">NHS App</a></li></ul></div><div><h4>Information</h4><ul><li><a href="privacy.html">Privacy Policy</a></li><li><a href="contact.html">Contact</a></li></ul></div></div><div class="footer-bottom"><p>&copy; 2026 Bethnal Green Health Centre. All rights reserved.</p></div></div></footer>
+    <script src="script.js"></script>
+</body>
+</html>

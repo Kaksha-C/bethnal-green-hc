@@ -1,0 +1,737 @@
+/* =============================================
+   Bethnal Green Health Centre – NHS-Style Theme
+   ============================================= */
+
+/* CSS Variables – NHS Design System Colours */
+:root {
+    --nhs-blue: #005eb8;
+    --nhs-dark-blue: #003087;
+    --nhs-bright-blue: #0072ce;
+    --nhs-light-blue: #41b6e6;
+    --nhs-aqua: #00a9ce;
+    --nhs-green: #007f3b;
+    --nhs-warm-yellow: #ffb81c;
+    --nhs-red: #da291c;
+    --nhs-dark-grey: #425563;
+    --nhs-mid-grey: #768692;
+    --nhs-pale-grey: #e8edee;
+    --nhs-white: #ffffff;
+    --nhs-black: #212b32;
+    --nhs-body-bg: #f0f4f5;
+    --nhs-focus: #ffeb3b;
+    --font-primary: 'Inter', 'Frutiger', Arial, sans-serif;
+    --max-width: 1200px;
+    --radius: 8px;
+    --shadow: 0 2px 8px rgba(0,0,0,0.08);
+    --shadow-lg: 0 4px 20px rgba(0,0,0,0.12);
+}
+
+/* Reset */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: var(--font-primary);
+    color: var(--nhs-black);
+    background: var(--nhs-body-bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    color: var(--nhs-blue);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+a:hover { color: var(--nhs-dark-blue); }
+a:focus {
+    outline: 3px solid var(--nhs-focus);
+    outline-offset: 2px;
+}
+
+img { max-width: 100%; height: auto; }
+
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* ---- NHS Top Banner ---- */
+.nhs-banner {
+    background: var(--nhs-blue);
+    padding: 8px 0;
+}
+.nhs-banner-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.nhs-logo { height: 28px; width: auto; }
+.nhs-top-nav { display: flex; gap: 20px; }
+.nhs-top-nav a {
+    color: var(--nhs-white);
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+.nhs-top-nav a:hover { text-decoration: underline; }
+
+/* ---- Main Header ---- */
+.main-header {
+    background: var(--nhs-white);
+    padding: 16px 0;
+    border-bottom: 4px solid var(--nhs-blue);
+}
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+.practice-icon {
+    font-size: 2.2rem;
+    color: var(--nhs-blue);
+}
+.practice-name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--nhs-dark-blue);
+    line-height: 1.2;
+}
+.practice-subtitle {
+    font-size: 0.9rem;
+    color: var(--nhs-mid-grey);
+    margin-top: 2px;
+}
+.header-right { display: flex; gap: 10px; }
+
+/* ---- Buttons ---- */
+.btn {
+    display: inline-block;
+    padding: 10px 22px;
+    border-radius: var(--radius);
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.2s;
+    text-align: center;
+}
+.btn-primary {
+    background: var(--nhs-green);
+    color: var(--nhs-white);
+    border-color: var(--nhs-green);
+}
+.btn-primary:hover {
+    background: #006631;
+    color: var(--nhs-white);
+    border-color: #006631;
+}
+.btn-outline {
+    background: transparent;
+    color: var(--nhs-blue);
+    border-color: var(--nhs-blue);
+}
+.btn-outline:hover {
+    background: var(--nhs-blue);
+    color: var(--nhs-white);
+}
+.btn-lg {
+    padding: 14px 32px;
+    font-size: 1.05rem;
+}
+.btn-secondary {
+    background: var(--nhs-blue);
+    color: var(--nhs-white);
+    border-color: var(--nhs-blue);
+}
+.btn-secondary:hover {
+    background: var(--nhs-dark-blue);
+    border-color: var(--nhs-dark-blue);
+    color: var(--nhs-white);
+}
+
+/* ---- Navigation ---- */
+.main-nav {
+    background: var(--nhs-dark-blue);
+    padding: 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 0;
+    flex-wrap: wrap;
+}
+.nav-list li a {
+    display: block;
+    padding: 14px 18px;
+    color: var(--nhs-white);
+    font-size: 0.92rem;
+    font-weight: 500;
+    transition: background 0.2s;
+}
+.nav-list li a:hover,
+.nav-list li a.active {
+    background: var(--nhs-blue);
+    color: var(--nhs-white);
+}
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--nhs-white);
+    font-size: 1.6rem;
+    cursor: pointer;
+    padding: 10px;
+}
+
+/* ---- Hero ---- */
+.hero {
+    background: linear-gradient(135deg, var(--nhs-blue) 0%, var(--nhs-dark-blue) 100%);
+    color: var(--nhs-white);
+    padding: 60px 0;
+}
+.hero-inner {
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    gap: 40px;
+    align-items: center;
+}
+.hero-content h2 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+    line-height: 1.2;
+}
+.hero-content p {
+    font-size: 1.1rem;
+    margin-bottom: 28px;
+    opacity: 0.92;
+    line-height: 1.7;
+}
+.hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+.hero-card {
+    background: var(--nhs-white);
+    color: var(--nhs-black);
+    padding: 28px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-lg);
+    border-left: 5px solid var(--nhs-red);
+}
+.hero-card h3 { font-size: 1.2rem; margin-bottom: 12px; color: var(--nhs-red); }
+.hero-card p { margin-bottom: 8px; font-size: 0.95rem; }
+.hero-card hr { border: none; border-top: 1px solid var(--nhs-pale-grey); margin: 14px 0; }
+.hero-card .small { font-size: 0.85rem; color: var(--nhs-mid-grey); }
+
+/* ---- Sections ---- */
+.section { padding: 56px 0; }
+.section-alt { background: var(--nhs-white); }
+.section-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--nhs-dark-blue);
+    margin-bottom: 28px;
+}
+
+/* ---- Card Grid ---- */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+.quick-card {
+    background: var(--nhs-white);
+    padding: 28px 24px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    border-top: 4px solid var(--nhs-blue);
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: block;
+    color: var(--nhs-black);
+}
+.quick-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    color: var(--nhs-black);
+}
+.quick-icon { font-size: 2.2rem; margin-bottom: 12px; }
+.quick-card h3 { font-size: 1.15rem; margin-bottom: 8px; color: var(--nhs-dark-blue); }
+.quick-card p { font-size: 0.9rem; color: var(--nhs-dark-grey); line-height: 1.5; }
+
+/* ---- Two Column ---- */
+.two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+}
+
+/* ---- Hours Table ---- */
+.hours-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 16px;
+}
+.hours-table td {
+    padding: 10px 16px;
+    border-bottom: 1px solid var(--nhs-pale-grey);
+    font-size: 0.95rem;
+}
+.hours-table td:first-child { font-weight: 600; }
+.hours-table tr.closed td { color: var(--nhs-red); }
+.note {
+    font-size: 0.85rem;
+    color: var(--nhs-mid-grey);
+    font-style: italic;
+}
+
+/* ---- Address Block ---- */
+.address-block {
+    background: var(--nhs-pale-grey);
+    padding: 20px;
+    border-radius: var(--radius);
+    margin-bottom: 20px;
+}
+.address-block p { font-size: 0.95rem; line-height: 1.6; }
+.contact-quick { margin-bottom: 20px; }
+.contact-quick p { margin-bottom: 6px; font-size: 0.95rem; }
+
+/* ---- Announcements ---- */
+.announcements { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 20px; }
+.announcement-card {
+    background: var(--nhs-white);
+    padding: 24px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    border-left: 4px solid var(--nhs-red);
+}
+.announcement-card h3 { margin: 10px 0 8px; font-size: 1.05rem; color: var(--nhs-dark-blue); }
+.announcement-card p { font-size: 0.9rem; color: var(--nhs-dark-grey); }
+.announcement-badge {
+    display: inline-block;
+    background: var(--nhs-red);
+    color: #fff;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    border-radius: 4px;
+    letter-spacing: 0.5px;
+}
+.announcement-badge.info { background: var(--nhs-blue); }
+.announcement-date { display: block; margin-top: 12px; font-size: 0.8rem; color: var(--nhs-mid-grey); }
+
+/* ---- NHS App Promo ---- */
+.nhs-app-promo {
+    background: linear-gradient(135deg, #e8f4fd 0%, #d4ecfc 100%);
+}
+.nhs-app-inner {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 40px;
+    align-items: center;
+}
+.nhs-app-promo h2 { color: var(--nhs-dark-blue); margin-bottom: 12px; }
+.nhs-app-promo p { color: var(--nhs-dark-grey); margin-bottom: 12px; }
+.nhs-app-promo ul {
+    list-style: none;
+    margin-bottom: 24px;
+}
+.nhs-app-promo li {
+    padding: 5px 0;
+    font-size: 0.95rem;
+    color: var(--nhs-dark-grey);
+}
+.nhs-app-promo li::before {
+    content: "\2713 ";
+    color: var(--nhs-green);
+    font-weight: 700;
+    margin-right: 8px;
+}
+.app-buttons { display: flex; gap: 12px; }
+.app-badge {
+    display: inline-block;
+    background: var(--nhs-black);
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: var(--radius);
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+.app-badge:hover { background: #333; color: #fff; }
+
+/* Phone Mockup */
+.phone-mockup {
+    width: 220px;
+    background: var(--nhs-black);
+    border-radius: 28px;
+    padding: 12px;
+    box-shadow: var(--shadow-lg);
+}
+.phone-screen {
+    background: var(--nhs-white);
+    border-radius: 18px;
+    padding: 20px 16px;
+    min-height: 300px;
+}
+.phone-header {
+    text-align: center;
+    font-weight: 700;
+    color: var(--nhs-blue);
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--nhs-pale-grey);
+}
+.phone-item {
+    padding: 12px;
+    margin-bottom: 8px;
+    background: var(--nhs-body-bg);
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+/* ---- Footer ---- */
+.main-footer {
+    background: var(--nhs-black);
+    color: #ccc;
+    padding: 48px 0 24px;
+}
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+    margin-bottom: 32px;
+}
+.main-footer h4 {
+    color: var(--nhs-white);
+    font-size: 1rem;
+    margin-bottom: 14px;
+}
+.main-footer p { font-size: 0.88rem; line-height: 1.6; }
+.main-footer ul { list-style: none; }
+.main-footer li { margin-bottom: 8px; }
+.main-footer a { color: #a0c4e8; font-size: 0.88rem; }
+.main-footer a:hover { color: var(--nhs-white); }
+.footer-bottom {
+    border-top: 1px solid #3a4a56;
+    padding-top: 20px;
+    text-align: center;
+}
+.footer-bottom p {
+    font-size: 0.82rem;
+    color: #8899a6;
+    margin-bottom: 4px;
+}
+
+/* ---- Page Header ---- */
+.page-header {
+    background: var(--nhs-blue);
+    color: var(--nhs-white);
+    padding: 36px 0;
+}
+.page-header h2 { font-size: 1.8rem; font-weight: 700; }
+.page-header p { opacity: 0.9; margin-top: 6px; }
+.breadcrumb {
+    font-size: 0.85rem;
+    margin-bottom: 8px;
+    opacity: 0.8;
+}
+.breadcrumb a { color: #b8d4f0; }
+
+/* ---- Forms ---- */
+.form-group {
+    margin-bottom: 22px;
+}
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 6px;
+    font-size: 0.95rem;
+    color: var(--nhs-dark-blue);
+}
+.form-group .hint {
+    display: block;
+    font-size: 0.82rem;
+    color: var(--nhs-mid-grey);
+    margin-bottom: 6px;
+}
+.form-control {
+    width: 100%;
+    padding: 12px 14px;
+    border: 2px solid var(--nhs-mid-grey);
+    border-radius: var(--radius);
+    font-size: 1rem;
+    font-family: var(--font-primary);
+    transition: border-color 0.2s;
+}
+.form-control:focus {
+    outline: 3px solid var(--nhs-focus);
+    border-color: var(--nhs-black);
+}
+select.form-control { cursor: pointer; }
+textarea.form-control { resize: vertical; min-height: 120px; }
+
+.form-card {
+    background: var(--nhs-white);
+    padding: 36px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    max-width: 700px;
+}
+.form-card.wide { max-width: 900px; }
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+/* ---- Content Card ---- */
+.content-card {
+    background: var(--nhs-white);
+    padding: 32px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    margin-bottom: 24px;
+}
+.content-card h3 {
+    font-size: 1.2rem;
+    color: var(--nhs-dark-blue);
+    margin-bottom: 12px;
+}
+
+/* ---- Info List ---- */
+.info-list {
+    list-style: none;
+}
+.info-list li {
+    padding: 14px 0;
+    border-bottom: 1px solid var(--nhs-pale-grey);
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+}
+.info-list .icon {
+    font-size: 1.4rem;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+/* ---- Team Grid ---- */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 20px;
+}
+.team-card {
+    background: var(--nhs-white);
+    padding: 24px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    text-align: center;
+}
+.team-avatar {
+    width: 80px;
+    height: 80px;
+    background: var(--nhs-pale-grey);
+    border-radius: 50%;
+    margin: 0 auto 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: var(--nhs-blue);
+}
+.team-card h4 { color: var(--nhs-dark-blue); margin-bottom: 4px; }
+.team-card .role { font-size: 0.85rem; color: var(--nhs-mid-grey); }
+
+/* ---- Appointment / Results Table ---- */
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--nhs-white);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+.data-table th {
+    background: var(--nhs-dark-blue);
+    color: var(--nhs-white);
+    padding: 14px 16px;
+    text-align: left;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+.data-table td {
+    padding: 14px 16px;
+    border-bottom: 1px solid var(--nhs-pale-grey);
+    font-size: 0.9rem;
+}
+.data-table tr:hover td { background: #f5f9fc; }
+.status-badge {
+    display: inline-block;
+    padding: 3px 12px;
+    border-radius: 20px;
+    font-size: 0.78rem;
+    font-weight: 600;
+}
+.status-confirmed { background: #e6f5ec; color: var(--nhs-green); }
+.status-pending { background: #fff8e1; color: #c77c00; }
+.status-completed { background: var(--nhs-pale-grey); color: var(--nhs-dark-grey); }
+.status-cancelled { background: #fde8e8; color: var(--nhs-red); }
+
+/* ---- Self-Referral Cards ---- */
+.referral-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+.referral-card {
+    background: var(--nhs-white);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 28px;
+    border-left: 5px solid var(--nhs-blue);
+}
+.referral-card h3 { color: var(--nhs-dark-blue); margin-bottom: 8px; }
+.referral-card p { font-size: 0.9rem; color: var(--nhs-dark-grey); margin-bottom: 16px; }
+
+/* ---- Sign In Page ---- */
+.signin-container {
+    max-width: 460px;
+    margin: 0 auto;
+}
+.signin-divider {
+    text-align: center;
+    margin: 28px 0;
+    position: relative;
+}
+.signin-divider::before {
+    content: "";
+    position: absolute;
+    left: 0; right: 0; top: 50%;
+    border-top: 1px solid var(--nhs-pale-grey);
+}
+.signin-divider span {
+    background: var(--nhs-white);
+    padding: 0 16px;
+    position: relative;
+    color: var(--nhs-mid-grey);
+    font-size: 0.85rem;
+}
+.nhs-login-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 14px;
+    background: var(--nhs-blue);
+    color: var(--nhs-white);
+    border: none;
+    border-radius: var(--radius);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.nhs-login-btn:hover { background: var(--nhs-dark-blue); color: var(--nhs-white); }
+
+/* ---- Tabs ---- */
+.tab-nav {
+    display: flex;
+    border-bottom: 3px solid var(--nhs-pale-grey);
+    margin-bottom: 24px;
+    gap: 0;
+}
+.tab-btn {
+    padding: 12px 24px;
+    background: none;
+    border: none;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--nhs-mid-grey);
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+    margin-bottom: -3px;
+    transition: all 0.2s;
+}
+.tab-btn.active, .tab-btn:hover {
+    color: var(--nhs-blue);
+    border-bottom-color: var(--nhs-blue);
+}
+.tab-content { display: none; }
+.tab-content.active { display: block; }
+
+/* ---- Alert Boxes ---- */
+.alert {
+    padding: 16px 20px;
+    border-radius: var(--radius);
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+}
+.alert-info {
+    background: #e8f4fd;
+    border-left: 4px solid var(--nhs-blue);
+    color: var(--nhs-dark-blue);
+}
+.alert-warning {
+    background: #fff8e1;
+    border-left: 4px solid var(--nhs-warm-yellow);
+    color: #7a5600;
+}
+.alert-success {
+    background: #e6f5ec;
+    border-left: 4px solid var(--nhs-green);
+    color: #005a2b;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 900px) {
+    .hero-inner { grid-template-columns: 1fr; }
+    .hero-card { max-width: 400px; }
+    .two-col { grid-template-columns: 1fr; }
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+    .nhs-app-inner { grid-template-columns: 1fr; }
+    .nhs-app-graphic { display: none; }
+    .form-row { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 640px) {
+    .mobile-menu-btn { display: block; }
+    .nav-list {
+        display: none;
+        flex-direction: column;
+    }
+    .nav-list.show { display: flex; }
+    .nav-list li a { padding: 12px 18px; border-bottom: 1px solid rgba(255,255,255,0.1); }
+    .hero-content h2 { font-size: 1.7rem; }
+    .hero { padding: 36px 0; }
+    .section { padding: 36px 0; }
+    .header-inner { flex-direction: column; align-items: flex-start; }
+    .footer-grid { grid-template-columns: 1fr; }
+    .nhs-top-nav { display: none; }
+    .card-grid { grid-template-columns: 1fr; }
+    .form-card { padding: 24px 18px; }
+    .data-table { font-size: 0.8rem; }
+    .data-table th, .data-table td { padding: 10px 8px; }
+    .tab-btn { padding: 10px 14px; font-size: 0.85rem; }
+}

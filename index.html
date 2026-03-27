@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bethnal Green Health Centre - NHS GP Practice</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Frutiger:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- NHS Top Banner -->
+    <div class="nhs-banner">
+        <div class="container nhs-banner-inner">
+            <a href="https://www.nhs.uk" class="nhs-logo-link" target="_blank">
+                <svg class="nhs-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 16" width="80" height="32">
+                    <path fill="#fff" d="M0 0h40v16H0z"/>
+                    <path fill="#005eb8" d="M3.9 1.5h4.4l2.6 9h.1l1.8-9h3.3l-2.8 13H9l-2.7-9h-.1l-1.8 9H1.1M17.3 1.5h3.6l-1 4.9h4L25 1.5h3.5l-2.7 13h-3.5l1.1-5.6h-4.1l-1.2 5.6h-3.4M37.7 4.4c-.7-.3-1.6-.6-2.9-.6-1.4 0-2.5.2-2.5 1.3 0 1.8 5.1 1.2 5.1 5.1 0 3.6-3.3 4.5-6.4 4.5-1.3 0-2.9-.3-4-.7l.8-2.7c.7.4 2.1.7 3.2.7s2.8-.2 2.8-1.5c0-2.1-5.1-1.3-5.1-5 0-3.4 2.9-4.4 5.8-4.4 1.6 0 3.1.2 4 .6"/>
+                </svg>
+            </a>
+            <nav class="nhs-top-nav">
+                <a href="https://www.nhs.uk/nhs-app/" target="_blank">NHS App</a>
+                <a href="https://www.nhs.uk/nhs-services/" target="_blank">NHS Services</a>
+                <a href="https://111.nhs.uk/" target="_blank">NHS 111</a>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="main-header">
+        <div class="container header-inner">
+            <div class="header-left">
+                <div class="practice-icon">&#9769;</div>
+                <div>
+                    <h1 class="practice-name">Bethnal Green Health Centre</h1>
+                    <p class="practice-subtitle">NHS GP Practice &bull; Tower Hamlets</p>
+                </div>
+            </div>
+            <div class="header-right">
+                <a href="signin.html" class="btn btn-outline">Sign In</a>
+                <a href="register.html" class="btn btn-primary">Register</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="container">
+            <button class="mobile-menu-btn" onclick="toggleMenu()" aria-label="Menu">&#9776;</button>
+            <ul class="nav-list" id="navList">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="self-referral.html">Self-Referral</a></li>
+                <li><a href="appointments.html">Appointments</a></li>
+                <li><a href="results.html">Test Results</a></li>
+                <li><a href="register.html">New Patients</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-inner">
+            <div class="hero-content">
+                <h2>Your Health, Our Priority</h2>
+                <p>Providing quality NHS healthcare to the Bethnal Green community since 1982. We are here for you — from routine check-ups to specialist referrals.</p>
+                <div class="hero-actions">
+                    <a href="appointments.html" class="btn btn-primary btn-lg">Book an Appointment</a>
+                    <a href="register.html" class="btn btn-outline btn-lg">Register as New Patient</a>
+                </div>
+            </div>
+            <div class="hero-card">
+                <h3>&#128222; Need Urgent Help?</h3>
+                <p><strong>Call 999</strong> for life-threatening emergencies</p>
+                <p><strong>Call 111</strong> for urgent medical advice</p>
+                <p><strong>Call us:</strong> 020 7364 0800</p>
+                <hr>
+                <p class="small">Out of hours? Contact NHS 111 online or by phone.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Access -->
+    <section class="section quick-access">
+        <div class="container">
+            <h2 class="section-title">Quick Access</h2>
+            <div class="card-grid">
+                <a href="https://www.nhs.uk/nhs-app/" target="_blank" class="quick-card">
+                    <div class="quick-icon">&#128241;</div>
+                    <h3>NHS App</h3>
+                    <p>Order prescriptions, book appointments, and view your health record</p>
+                </a>
+                <a href="appointments.html" class="quick-card">
+                    <div class="quick-icon">&#128197;</div>
+                    <h3>Appointments</h3>
+                    <p>View, book, or cancel your upcoming appointments</p>
+                </a>
+                <a href="results.html" class="quick-card">
+                    <div class="quick-icon">&#128203;</div>
+                    <h3>Test Results</h3>
+                    <p>View your past reports and lab test results securely</p>
+                </a>
+                <a href="self-referral.html" class="quick-card">
+                    <div class="quick-icon">&#128100;</div>
+                    <h3>Self-Referral</h3>
+                    <p>Refer yourself to NHS services without needing a GP appointment</p>
+                </a>
+                <a href="prescriptions.html" class="quick-card">
+                    <div class="quick-icon">&#128138;</div>
+                    <h3>Prescriptions</h3>
+                    <p>Order repeat prescriptions online through the NHS App</p>
+                </a>
+                <a href="register.html" class="quick-card">
+                    <div class="quick-icon">&#128221;</div>
+                    <h3>Register</h3>
+                    <p>New to the area? Register as a new patient with us</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Opening Hours -->
+    <section class="section section-alt">
+        <div class="container">
+            <div class="two-col">
+                <div>
+                    <h2 class="section-title">Opening Hours</h2>
+                    <table class="hours-table">
+                        <tr><td>Monday</td><td>8:00 AM – 6:30 PM</td></tr>
+                        <tr><td>Tuesday</td><td>8:00 AM – 6:30 PM</td></tr>
+                        <tr><td>Wednesday</td><td>8:00 AM – 6:30 PM</td></tr>
+                        <tr><td>Thursday</td><td>8:00 AM – 6:30 PM</td></tr>
+                        <tr><td>Friday</td><td>8:00 AM – 6:30 PM</td></tr>
+                        <tr class="closed"><td>Saturday</td><td>Closed</td></tr>
+                        <tr class="closed"><td>Sunday</td><td>Closed</td></tr>
+                    </table>
+                    <p class="note">Extended hours available on Tuesdays and Thursdays until 8:00 PM — by appointment only.</p>
+                </div>
+                <div>
+                    <h2 class="section-title">Find Us</h2>
+                    <div class="address-block">
+                        <p><strong>Bethnal Green Health Centre</strong></p>
+                        <p>Bethnal Green Road</p>
+                        <p>London, E2 6DG</p>
+                        <p>United Kingdom</p>
+                    </div>
+                    <div class="contact-quick">
+                        <p>&#128222; <strong>Telephone:</strong> 020 7364 0800</p>
+                        <p>&#128224; <strong>Fax:</strong> 020 7364 0801</p>
+                        <p>&#9993; <strong>Email:</strong> bghc.reception@nhs.net</p>
+                    </div>
+                    <div class="map-embed">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.8!2d-0.055!3d51.527!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sBethnal+Green!5e0!3m2!1sen!2suk!4v1" width="100%" height="200" style="border:0;border-radius:8px;" allowfullscreen loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Announcements -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Latest News & Announcements</h2>
+            <div class="announcements">
+                <div class="announcement-card">
+                    <span class="announcement-badge">Important</span>
+                    <h3>Flu & COVID-19 Boosters Available</h3>
+                    <p>Eligible patients can now book their spring booster vaccinations. Contact reception or book through the NHS App.</p>
+                    <span class="announcement-date">25 March 2026</span>
+                </div>
+                <div class="announcement-card">
+                    <span class="announcement-badge info">Update</span>
+                    <h3>New Online Consultation Service</h3>
+                    <p>Submit your health queries online via our eConsult service. Get advice from a GP within 48 hours without visiting the surgery.</p>
+                    <span class="announcement-date">18 March 2026</span>
+                </div>
+                <div class="announcement-card">
+                    <span class="announcement-badge info">Reminder</span>
+                    <h3>Bank Holiday Closure — Good Friday</h3>
+                    <p>The practice will be closed on Friday 3rd April. For urgent matters, please call NHS 111.</p>
+                    <span class="announcement-date">10 March 2026</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NHS App Promo -->
+    <section class="section nhs-app-promo">
+        <div class="container nhs-app-inner">
+            <div>
+                <h2>Download the NHS App</h2>
+                <p>Manage your health from your phone. With the NHS App you can:</p>
+                <ul>
+                    <li>Book and manage GP appointments</li>
+                    <li>Order repeat prescriptions</li>
+                    <li>View your GP health record</li>
+                    <li>View test results</li>
+                    <li>Get health advice and information</li>
+                    <li>Register organ donation preferences</li>
+                </ul>
+                <div class="app-buttons">
+                    <a href="https://apps.apple.com/gb/app/nhs-app/id1388411277" target="_blank" class="app-badge">&#63743; App Store</a>
+                    <a href="https://play.google.com/store/apps/details?id=com.nhs.online.nhsonline" target="_blank" class="app-badge">&#9654; Google Play</a>
+                </div>
+            </div>
+            <div class="nhs-app-graphic">
+                <div class="phone-mockup">
+                    <div class="phone-screen">
+                        <div class="phone-header">NHS App</div>
+                        <div class="phone-item">&#128197; Appointments</div>
+                        <div class="phone-item">&#128138; Prescriptions</div>
+                        <div class="phone-item">&#128203; Health Record</div>
+                        <div class="phone-item">&#128269; Test Results</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h4>Bethnal Green Health Centre</h4>
+                    <p>Bethnal Green Road<br>London, E2 6DG</p>
+                    <p>Tel: 020 7364 0800</p>
+                </div>
+                <div>
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="appointments.html">Book Appointment</a></li>
+                        <li><a href="register.html">Register as Patient</a></li>
+                        <li><a href="self-referral.html">Self-Referral</a></li>
+                        <li><a href="results.html">Test Results</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Useful Links</h4>
+                    <ul>
+                        <li><a href="https://www.nhs.uk" target="_blank">NHS Website</a></li>
+                        <li><a href="https://www.nhs.uk/nhs-app/" target="_blank">NHS App</a></li>
+                        <li><a href="https://111.nhs.uk" target="_blank">NHS 111 Online</a></li>
+                        <li><a href="https://www.towerhamlets.gov.uk" target="_blank">Tower Hamlets Council</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Information</h4>
+                    <ul>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="accessibility.html">Accessibility</a></li>
+                        <li><a href="complaints.html">Complaints</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Bethnal Green Health Centre. All rights reserved.</p>
+                <p>This site is for demonstration purposes. In an emergency, always call 999.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

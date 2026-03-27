@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Self-Referral Services - Bethnal Green Health Centre</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="nhs-banner"><div class="container nhs-banner-inner"><a href="https://www.nhs.uk" class="nhs-logo-link" target="_blank"><svg class="nhs-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 16" width="80" height="32"><path fill="#fff" d="M0 0h40v16H0z"/><path fill="#005eb8" d="M3.9 1.5h4.4l2.6 9h.1l1.8-9h3.3l-2.8 13H9l-2.7-9h-.1l-1.8 9H1.1M17.3 1.5h3.6l-1 4.9h4L25 1.5h3.5l-2.7 13h-3.5l1.1-5.6h-4.1l-1.2 5.6h-3.4M37.7 4.4c-.7-.3-1.6-.6-2.9-.6-1.4 0-2.5.2-2.5 1.3 0 1.8 5.1 1.2 5.1 5.1 0 3.6-3.3 4.5-6.4 4.5-1.3 0-2.9-.3-4-.7l.8-2.7c.7.4 2.1.7 3.2.7s2.8-.2 2.8-1.5c0-2.1-5.1-1.3-5.1-5 0-3.4 2.9-4.4 5.8-4.4 1.6 0 3.1.2 4 .6"/></svg></a><nav class="nhs-top-nav"><a href="https://www.nhs.uk/nhs-app/" target="_blank">NHS App</a><a href="https://111.nhs.uk/" target="_blank">NHS 111</a></nav></div></div>
+
+    <header class="main-header"><div class="container header-inner"><div class="header-left"><div class="practice-icon">&#9769;</div><div><h1 class="practice-name">Bethnal Green Health Centre</h1><p class="practice-subtitle">NHS GP Practice &bull; Tower Hamlets</p></div></div><div class="header-right"><a href="signin.html" class="btn btn-outline">Sign In</a><a href="register.html" class="btn btn-primary">Register</a></div></div></header>
+
+    <nav class="main-nav"><div class="container"><button class="mobile-menu-btn" onclick="toggleMenu()" aria-label="Menu">&#9776;</button><ul class="nav-list" id="navList"><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="services.html">Services</a></li><li><a href="self-referral.html" class="active">Self-Referral</a></li><li><a href="appointments.html">Appointments</a></li><li><a href="results.html">Test Results</a></li><li><a href="register.html">New Patients</a></li><li><a href="contact.html">Contact</a></li></ul></div></nav>
+
+    <div class="page-header">
+        <div class="container">
+            <p class="breadcrumb"><a href="index.html">Home</a> &rsaquo; Self-Referral Services</p>
+            <h2>Self-Referral Services</h2>
+            <p>Access NHS services directly — no GP appointment needed</p>
+        </div>
+    </div>
+
+    <section class="section">
+        <div class="container">
+            <div class="alert alert-success">
+                <strong>You don't always need to see your GP first.</strong> Many NHS services accept self-referrals, meaning you can contact them directly. This can save time and get you the help you need faster.
+            </div>
+
+            <h2 class="section-title">Available Self-Referral Services</h2>
+            <div class="referral-grid">
+                <div class="referral-card">
+                    <h3>&#129504; NHS Talking Therapies (IAPT)</h3>
+                    <p>Free, confidential support for anxiety, depression, stress, phobias, OCD, and PTSD. Available for anyone aged 18+.</p>
+                    <a href="https://www.nhs.uk/mental-health/talking-therapies-medicine-treatments/talking-therapies-and-counselling/nhs-talking-therapies/" target="_blank" class="btn btn-secondary">Refer Yourself</a>
+                </div>
+                <div class="referral-card">
+                    <h3>&#127939; NHS Physiotherapy</h3>
+                    <p>Self-refer for musculoskeletal problems including back pain, joint pain, sports injuries, and post-surgical rehabilitation.</p>
+                    <a href="#" class="btn btn-secondary" onclick="alert('This would link to your local MSK self-referral service.')">Refer Yourself</a>
+                </div>
+                <div class="referral-card">
+                    <h3>&#128065; NHS Eye Care</h3>
+                    <p>Visit any NHS optician directly for eye tests and treatment. Free for under 16s, over 60s, and those on certain benefits.</p>
+                    <a href="https://www.nhs.uk/nhs-services/opticians/" target="_blank" class="btn btn-secondary">Find an Optician</a>
+                </div>
+                <div class="referral-card">
+                    <h3>&#129463; NHS Podiatry / Foot Care</h3>
+                    <p>Self-refer to podiatry services for foot problems including diabetic foot care, nail problems, and biomechanical issues.</p>
+                    <a href="#" class="btn btn-secondary" onclick="alert('This would link to your local podiatry self-referral service.')">Refer Yourself</a>
+                </div>
+                <div class="referral-card">
+                    <h3>&#128266; Stop Smoking Service</h3>
+                    <p>Free NHS support to help you quit smoking. Includes counselling, nicotine replacement therapy, and prescription medications.</p>
+                    <a href="https://www.nhs.uk/better-health/quit-smoking/" target="_blank" class="btn btn-secondary">Get Support</a>
+                </div>
+                <div class="referral-card">
+                    <h3>&#127864; Drug & Alcohol Services</h3>
+                    <p>Confidential support for drug and alcohol issues. No judgement, no GP referral needed. Open to anyone.</p>
+                    <a href="https://www.nhs.uk/live-well/addiction-support/" target="_blank" class="btn btn-secondary">Find Support</a>
+                </div>
+                <div class="referral-card">
+                    <h3>&#128118; Health Visiting (0-5 years)</h3>
+                    <p>Support for parents and carers of children under 5. Advice on feeding, sleeping, development, and postnatal wellbeing.</p>
+                    <a href="#" class="btn btn-secondary" onclick="alert('This would link to your local health visiting team.')">Contact Service</a>
+                </div>
+                <div class="referral-card">
+                    <h3>&#9877; Sexual Health Services</h3>
+                    <p>Free and confidential sexual health clinics for STI testing, contraception, and emergency contraception. No GP referral needed.</p>
+                    <a href="https://www.nhs.uk/nhs-services/sexual-health-services/" target="_blank" class="btn btn-secondary">Find a Clinic</a>
+                </div>
+            </div>
+
+            <!-- Self-Referral Form -->
+            <div class="content-card" style="margin-top:40px;">
+                <h3>Submit a Self-Referral Request</h3>
+                <p style="margin-bottom:20px;color:#425563;">Use this form if you'd like our team to help connect you with the right service.</p>
+
+                <form onsubmit="handleReferral(event)">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="refName">Full Name *</label>
+                            <input type="text" id="refName" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="refDob">Date of Birth *</label>
+                            <input type="date" id="refDob" class="form-control" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="refPhone">Phone Number *</label>
+                            <input type="tel" id="refPhone" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="refService">Service Required *</label>
+                            <select id="refService" class="form-control" required>
+                                <option value="">Select a service...</option>
+                                <option>NHS Talking Therapies (Mental Health)</option>
+                                <option>Physiotherapy / MSK</option>
+                                <option>Podiatry / Foot Care</option>
+                                <option>Stop Smoking</option>
+                                <option>Drug & Alcohol Support</option>
+                                <option>Sexual Health</option>
+                                <option>Health Visiting</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="refDetails">Brief Description of Your Needs *</label>
+                        <textarea id="refDetails" class="form-control" rows="4" required placeholder="Please describe what you need help with..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-lg">Submit Referral</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer"><div class="container"><div class="footer-grid"><div><h4>Bethnal Green Health Centre</h4><p>Bethnal Green Road<br>London, E2 6DG</p><p>Tel: 020 7364 0800</p></div><div><h4>Quick Links</h4><ul><li><a href="appointments.html">Appointments</a></li><li><a href="register.html">Register</a></li></ul></div><div><h4>Useful Links</h4><ul><li><a href="https://www.nhs.uk" target="_blank">NHS Website</a></li><li><a href="https://www.nhs.uk/nhs-app/" target="_blank">NHS App</a></li></ul></div><div><h4>Information</h4><ul><li><a href="privacy.html">Privacy Policy</a></li><li><a href="contact.html">Contact</a></li></ul></div></div><div class="footer-bottom"><p>&copy; 2026 Bethnal Green Health Centre. All rights reserved.</p></div></div></footer>
+    <script src="script.js"></script>
+</body>
+</html>

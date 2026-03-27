@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointments - Bethnal Green Health Centre</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="nhs-banner"><div class="container nhs-banner-inner"><a href="https://www.nhs.uk" class="nhs-logo-link" target="_blank"><svg class="nhs-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 16" width="80" height="32"><path fill="#fff" d="M0 0h40v16H0z"/><path fill="#005eb8" d="M3.9 1.5h4.4l2.6 9h.1l1.8-9h3.3l-2.8 13H9l-2.7-9h-.1l-1.8 9H1.1M17.3 1.5h3.6l-1 4.9h4L25 1.5h3.5l-2.7 13h-3.5l1.1-5.6h-4.1l-1.2 5.6h-3.4M37.7 4.4c-.7-.3-1.6-.6-2.9-.6-1.4 0-2.5.2-2.5 1.3 0 1.8 5.1 1.2 5.1 5.1 0 3.6-3.3 4.5-6.4 4.5-1.3 0-2.9-.3-4-.7l.8-2.7c.7.4 2.1.7 3.2.7s2.8-.2 2.8-1.5c0-2.1-5.1-1.3-5.1-5 0-3.4 2.9-4.4 5.8-4.4 1.6 0 3.1.2 4 .6"/></svg></a><nav class="nhs-top-nav"><a href="https://www.nhs.uk/nhs-app/" target="_blank">NHS App</a><a href="https://111.nhs.uk/" target="_blank">NHS 111</a></nav></div></div>
+
+    <header class="main-header"><div class="container header-inner"><div class="header-left"><div class="practice-icon">&#9769;</div><div><h1 class="practice-name">Bethnal Green Health Centre</h1><p class="practice-subtitle">NHS GP Practice &bull; Tower Hamlets</p></div></div><div class="header-right"><a href="signin.html" class="btn btn-outline">Sign In</a><a href="register.html" class="btn btn-primary">Register</a></div></div></header>
+
+    <nav class="main-nav"><div class="container"><button class="mobile-menu-btn" onclick="toggleMenu()" aria-label="Menu">&#9776;</button><ul class="nav-list" id="navList"><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="services.html">Services</a></li><li><a href="self-referral.html">Self-Referral</a></li><li><a href="appointments.html" class="active">Appointments</a></li><li><a href="results.html">Test Results</a></li><li><a href="register.html">New Patients</a></li><li><a href="contact.html">Contact</a></li></ul></div></nav>
+
+    <div class="page-header">
+        <div class="container">
+            <p class="breadcrumb"><a href="index.html">Home</a> &rsaquo; Appointments</p>
+            <h2>Your Appointments</h2>
+            <p>View, book, and manage your GP appointments</p>
+        </div>
+    </div>
+
+    <section class="section">
+        <div class="container">
+            <!-- Tabs -->
+            <div class="tab-nav">
+                <button class="tab-btn active" onclick="openTab('upcoming', this)">Upcoming Appointments</button>
+                <button class="tab-btn" onclick="openTab('past', this)">Past Appointments</button>
+                <button class="tab-btn" onclick="openTab('book', this)">Book New Appointment</button>
+            </div>
+
+            <!-- Upcoming Appointments -->
+            <div id="upcoming" class="tab-content active">
+                <div class="alert alert-info">
+                    Showing demo appointment data. In a live system, this would display your real NHS appointments.
+                </div>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Time</th>
+                            <th>Doctor / Clinician</th>
+                            <th>Type</th>
+                            <th>Location</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>31 Mar 2026</strong></td>
+                            <td>09:30 AM</td>
+                            <td>Dr Amira Patel</td>
+                            <td>General Consultation</td>
+                            <td>Room 3, Ground Floor</td>
+                            <td><span class="status-badge status-confirmed">Confirmed</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>07 Apr 2026</strong></td>
+                            <td>11:00 AM</td>
+                            <td>Nurse Helen Murray</td>
+                            <td>Chronic Disease Review</td>
+                            <td>Nurse Room 1</td>
+                            <td><span class="status-badge status-confirmed">Confirmed</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>14 Apr 2026</strong></td>
+                            <td>02:15 PM</td>
+                            <td>Tom Richards (HCA)</td>
+                            <td>Blood Test</td>
+                            <td>Treatment Room 2</td>
+                            <td><span class="status-badge status-pending">Pending</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="content-card" style="margin-top:24px;">
+                    <h3>Appointment Reminders</h3>
+                    <p style="font-size:0.9rem;color:#425563;">You will receive an SMS reminder 24 hours before your appointment. If you cannot attend, please cancel at least 24 hours in advance so we can offer the slot to another patient.</p>
+                    <p style="margin-top:8px;font-size:0.9rem;"><strong>To cancel:</strong> Call reception on 020 7364 0800 or use the NHS App.</p>
+                </div>
+            </div>
+
+            <!-- Past Appointments -->
+            <div id="past" class="tab-content">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Time</th>
+                            <th>Doctor / Clinician</th>
+                            <th>Type</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>10 Mar 2026</td>
+                            <td>10:00 AM</td>
+                            <td>Dr James Chen</td>
+                            <td>General Consultation</td>
+                            <td><span class="status-badge status-completed">Completed</span></td>
+                        </tr>
+                        <tr>
+                            <td>24 Feb 2026</td>
+                            <td>09:00 AM</td>
+                            <td>Nurse Lisa Thompson</td>
+                            <td>Cervical Screening</td>
+                            <td><span class="status-badge status-completed">Completed</span></td>
+                        </tr>
+                        <tr>
+                            <td>12 Feb 2026</td>
+                            <td>03:30 PM</td>
+                            <td>Dr Sarah Okonkwo</td>
+                            <td>Mental Health Review</td>
+                            <td><span class="status-badge status-completed">Completed</span></td>
+                        </tr>
+                        <tr>
+                            <td>05 Jan 2026</td>
+                            <td>11:45 AM</td>
+                            <td>Dr Amira Patel</td>
+                            <td>Diabetes Review</td>
+                            <td><span class="status-badge status-completed">Completed</span></td>
+                        </tr>
+                        <tr>
+                            <td>18 Dec 2025</td>
+                            <td>08:30 AM</td>
+                            <td>Dr Raj Sharma</td>
+                            <td>Flu Vaccination</td>
+                            <td><span class="status-badge status-completed">Completed</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Book New Appointment -->
+            <div id="book" class="tab-content">
+                <div class="form-card wide">
+                    <h3 style="margin-bottom:20px;color:#003087;">Request an Appointment</h3>
+                    <div class="alert alert-warning">
+                        For <strong>urgent same-day appointments</strong>, please call reception on <strong>020 7364 0800</strong> at 8:00 AM. Phone lines open at 8:00 AM Monday to Friday.
+                    </div>
+
+                    <form onsubmit="handleBookAppointment(event)">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="apptType">Appointment Type *</label>
+                                <select id="apptType" class="form-control" required>
+                                    <option value="">Select type...</option>
+                                    <option>General Consultation (GP)</option>
+                                    <option>Telephone Consultation</option>
+                                    <option>Nurse Appointment</option>
+                                    <option>Blood Test</option>
+                                    <option>Chronic Disease Review</option>
+                                    <option>Cervical Screening</option>
+                                    <option>Child Immunisation</option>
+                                    <option>Travel Vaccination</option>
+                                    <option>NHS Health Check</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="prefDoctor">Preferred Doctor / Clinician</label>
+                                <select id="prefDoctor" class="form-control">
+                                    <option value="">No preference</option>
+                                    <option>Dr Amira Patel</option>
+                                    <option>Dr James Chen</option>
+                                    <option>Dr Sarah Okonkwo</option>
+                                    <option>Dr Raj Sharma</option>
+                                    <option>Nurse Helen Murray</option>
+                                    <option>Nurse Lisa Thompson</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="prefDate">Preferred Date *</label>
+                                <input type="date" id="prefDate" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="prefTime">Preferred Time</label>
+                                <select id="prefTime" class="form-control">
+                                    <option>Morning (8:00 - 12:00)</option>
+                                    <option>Afternoon (12:00 - 18:30)</option>
+                                    <option>No preference</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="reason">Reason for Appointment *</label>
+                            <span class="hint">Brief description of your symptoms or reason for visit</span>
+                            <textarea id="reason" class="form-control" rows="3" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-lg">Request Appointment</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer"><div class="container"><div class="footer-grid"><div><h4>Bethnal Green Health Centre</h4><p>Bethnal Green Road<br>London, E2 6DG</p><p>Tel: 020 7364 0800</p></div><div><h4>Quick Links</h4><ul><li><a href="register.html">Register</a></li><li><a href="self-referral.html">Self-Referral</a></li><li><a href="results.html">Test Results</a></li></ul></div><div><h4>Useful Links</h4><ul><li><a href="https://www.nhs.uk" target="_blank">NHS Website</a></li><li><a href="https://www.nhs.uk/nhs-app/" target="_blank">NHS App</a></li></ul></div><div><h4>Information</h4><ul><li><a href="privacy.html">Privacy Policy</a></li><li><a href="contact.html">Contact</a></li></ul></div></div><div class="footer-bottom"><p>&copy; 2026 Bethnal Green Health Centre. All rights reserved.</p></div></div></footer>
+    <script src="script.js"></script>
+</body>
+</html>

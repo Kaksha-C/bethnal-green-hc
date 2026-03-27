@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Results & Reports - Bethnal Green Health Centre</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="nhs-banner"><div class="container nhs-banner-inner"><a href="https://www.nhs.uk" class="nhs-logo-link" target="_blank"><svg class="nhs-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 16" width="80" height="32"><path fill="#fff" d="M0 0h40v16H0z"/><path fill="#005eb8" d="M3.9 1.5h4.4l2.6 9h.1l1.8-9h3.3l-2.8 13H9l-2.7-9h-.1l-1.8 9H1.1M17.3 1.5h3.6l-1 4.9h4L25 1.5h3.5l-2.7 13h-3.5l1.1-5.6h-4.1l-1.2 5.6h-3.4M37.7 4.4c-.7-.3-1.6-.6-2.9-.6-1.4 0-2.5.2-2.5 1.3 0 1.8 5.1 1.2 5.1 5.1 0 3.6-3.3 4.5-6.4 4.5-1.3 0-2.9-.3-4-.7l.8-2.7c.7.4 2.1.7 3.2.7s2.8-.2 2.8-1.5c0-2.1-5.1-1.3-5.1-5 0-3.4 2.9-4.4 5.8-4.4 1.6 0 3.1.2 4 .6"/></svg></a><nav class="nhs-top-nav"><a href="https://www.nhs.uk/nhs-app/" target="_blank">NHS App</a><a href="https://111.nhs.uk/" target="_blank">NHS 111</a></nav></div></div>
+
+    <header class="main-header"><div class="container header-inner"><div class="header-left"><div class="practice-icon">&#9769;</div><div><h1 class="practice-name">Bethnal Green Health Centre</h1><p class="practice-subtitle">NHS GP Practice &bull; Tower Hamlets</p></div></div><div class="header-right"><a href="signin.html" class="btn btn-outline">Sign In</a><a href="register.html" class="btn btn-primary">Register</a></div></div></header>
+
+    <nav class="main-nav"><div class="container"><button class="mobile-menu-btn" onclick="toggleMenu()" aria-label="Menu">&#9776;</button><ul class="nav-list" id="navList"><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="services.html">Services</a></li><li><a href="self-referral.html">Self-Referral</a></li><li><a href="appointments.html">Appointments</a></li><li><a href="results.html" class="active">Test Results</a></li><li><a href="register.html">New Patients</a></li><li><a href="contact.html">Contact</a></li></ul></div></nav>
+
+    <div class="page-header">
+        <div class="container">
+            <p class="breadcrumb"><a href="index.html">Home</a> &rsaquo; Test Results &amp; Reports</p>
+            <h2>Test Results &amp; Medical Reports</h2>
+            <p>View your laboratory results, screening reports, and medical documents</p>
+        </div>
+    </div>
+
+    <section class="section">
+        <div class="container">
+            <div class="alert alert-info">
+                This page shows demo data. In a live system, your actual test results would be displayed securely after signing in. You can also view results via the <a href="https://www.nhs.uk/nhs-app/" target="_blank"><strong>NHS App</strong></a>.
+            </div>
+
+            <!-- Tabs -->
+            <div class="tab-nav">
+                <button class="tab-btn active" onclick="openTab('labResults', this)">Lab Results</button>
+                <button class="tab-btn" onclick="openTab('reports', this)">Medical Reports</button>
+                <button class="tab-btn" onclick="openTab('screenings', this)">Screening Results</button>
+            </div>
+
+            <!-- Lab Results -->
+            <div id="labResults" class="tab-content active">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Test Name</th>
+                            <th>Result</th>
+                            <th>Normal Range</th>
+                            <th>Requested By</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>15 Mar 2026</strong></td>
+                            <td>Full Blood Count (FBC)</td>
+                            <td>Normal</td>
+                            <td>—</td>
+                            <td>Dr Amira Patel</td>
+                            <td><span class="status-badge status-confirmed">Normal</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>15 Mar 2026</strong></td>
+                            <td>HbA1c (Diabetes)</td>
+                            <td>42 mmol/mol</td>
+                            <td>&lt; 42 mmol/mol</td>
+                            <td>Dr Amira Patel</td>
+                            <td><span class="status-badge status-confirmed">Normal</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>15 Mar 2026</strong></td>
+                            <td>Cholesterol (Total)</td>
+                            <td>5.8 mmol/L</td>
+                            <td>&lt; 5.0 mmol/L</td>
+                            <td>Dr Amira Patel</td>
+                            <td><span class="status-badge status-pending">Borderline</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>15 Mar 2026</strong></td>
+                            <td>Thyroid Function (TSH)</td>
+                            <td>2.1 mU/L</td>
+                            <td>0.4 – 4.0 mU/L</td>
+                            <td>Dr Amira Patel</td>
+                            <td><span class="status-badge status-confirmed">Normal</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>10 Jan 2026</strong></td>
+                            <td>Liver Function (LFT)</td>
+                            <td>Normal</td>
+                            <td>—</td>
+                            <td>Dr James Chen</td>
+                            <td><span class="status-badge status-confirmed">Normal</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>10 Jan 2026</strong></td>
+                            <td>Kidney Function (U&amp;E)</td>
+                            <td>Normal</td>
+                            <td>—</td>
+                            <td>Dr James Chen</td>
+                            <td><span class="status-badge status-confirmed">Normal</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>12 Nov 2025</strong></td>
+                            <td>Vitamin D</td>
+                            <td>38 nmol/L</td>
+                            <td>&gt; 50 nmol/L</td>
+                            <td>Dr Sarah Okonkwo</td>
+                            <td><span class="status-badge status-cancelled">Low</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="content-card" style="margin-top:24px;">
+                    <h3>Understanding Your Results</h3>
+                    <p style="font-size:0.9rem;color:#425563;">If a result is marked as <strong>abnormal</strong> or <strong>borderline</strong>, your GP will contact you to discuss the next steps. If your results are normal and no action is needed, you may not be contacted directly.</p>
+                    <p style="font-size:0.9rem;color:#425563;margin-top:8px;">Results typically take <strong>3-5 working days</strong> from the date of your blood test. Some specialist tests may take longer.</p>
+                </div>
+            </div>
+
+            <!-- Medical Reports -->
+            <div id="reports" class="tab-content">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Report Type</th>
+                            <th>Summary</th>
+                            <th>Doctor</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>05 Jan 2026</strong></td>
+                            <td>Diabetes Annual Review</td>
+                            <td>HbA1c within target. Continue current medication. Review in 6 months.</td>
+                            <td>Dr Amira Patel</td>
+                            <td><a href="#" class="btn btn-outline" style="padding:6px 14px;font-size:0.8rem;">View</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>20 Nov 2025</strong></td>
+                            <td>Cardiology Referral Letter</td>
+                            <td>Referred for ECG and stress test following chest pain investigation.</td>
+                            <td>Dr James Chen</td>
+                            <td><a href="#" class="btn btn-outline" style="padding:6px 14px;font-size:0.8rem;">View</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>15 Sep 2025</strong></td>
+                            <td>Mental Health Assessment</td>
+                            <td>Mild anxiety. Referred to IAPT talking therapies. Review in 8 weeks.</td>
+                            <td>Dr Sarah Okonkwo</td>
+                            <td><a href="#" class="btn btn-outline" style="padding:6px 14px;font-size:0.8rem;">View</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Screening Results -->
+            <div id="screenings" class="tab-content">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Screening Type</th>
+                            <th>Result</th>
+                            <th>Next Due</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>24 Feb 2026</strong></td>
+                            <td>Cervical Screening (Smear Test)</td>
+                            <td>No abnormalities detected (HPV negative)</td>
+                            <td>Feb 2029</td>
+                            <td><span class="status-badge status-confirmed">Normal</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>15 Oct 2025</strong></td>
+                            <td>NHS Health Check (40-74)</td>
+                            <td>Low cardiovascular risk. Lifestyle advice given.</td>
+                            <td>Oct 2030</td>
+                            <td><span class="status-badge status-confirmed">Normal</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>01 Jun 2025</strong></td>
+                            <td>Bowel Cancer Screening (FIT)</td>
+                            <td>Normal — no further action required</td>
+                            <td>Jun 2027</td>
+                            <td><span class="status-badge status-confirmed">Normal</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="content-card" style="margin-top:24px;">
+                    <h3>NHS Screening Programmes</h3>
+                    <p style="font-size:0.9rem;color:#425563;">The NHS offers free screening programmes to help detect conditions early:</p>
+                    <ul style="margin:12px 0 0 20px;font-size:0.9rem;color:#425563;line-height:2;">
+                        <li><strong>Cervical screening:</strong> Women aged 25-64, every 3-5 years</li>
+                        <li><strong>Breast screening:</strong> Women aged 50-71, every 3 years</li>
+                        <li><strong>Bowel cancer screening:</strong> Everyone aged 60-74, every 2 years</li>
+                        <li><strong>Abdominal aortic aneurysm:</strong> Men at age 65</li>
+                        <li><strong>NHS Health Check:</strong> Ages 40-74, every 5 years</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer"><div class="container"><div class="footer-grid"><div><h4>Bethnal Green Health Centre</h4><p>Bethnal Green Road<br>London, E2 6DG</p><p>Tel: 020 7364 0800</p></div><div><h4>Quick Links</h4><ul><li><a href="appointments.html">Appointments</a></li><li><a href="register.html">Register</a></li></ul></div><div><h4>Useful Links</h4><ul><li><a href="https://www.nhs.uk" target="_blank">NHS Website</a></li><li><a href="https://www.nhs.uk/nhs-app/" target="_blank">NHS App</a></li></ul></div><div><h4>Information</h4><ul><li><a href="privacy.html">Privacy Policy</a></li><li><a href="contact.html">Contact</a></li></ul></div></div><div class="footer-bottom"><p>&copy; 2026 Bethnal Green Health Centre. All rights reserved.</p></div></div></footer>
+    <script src="script.js"></script>
+</body>
+</html>
